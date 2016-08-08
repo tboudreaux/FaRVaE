@@ -25,3 +25,5 @@ Aperture and Region file definition tool
 - Run Python Main.py
 - argument after Main.py data desitiation folder
 - -si will allow you to spesify a start index
+- EXAMPLE: "python Main.py -si 4 ARCHIVE"
+-     Will run FaRVaE starting at the 4th folder it indexed at the Relative Path to Main.py ARCHIVE

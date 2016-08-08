@@ -27,7 +27,7 @@ dest_folder = args.Cs[0]
 i = 0
 print dest_folder
 start = os.path.abspath('.')
-os.chdir('Second_SDB/' + dest_folder)
+os.chdir(dest_folder)
 working_dir = os.path.abspath('.')
 movies = args.mov
 c1 = '#66ff66'

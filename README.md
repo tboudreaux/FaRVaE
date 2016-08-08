@@ -24,4 +24,4 @@ Aperture and Region file definition tool
 <h2>Running</h2>
 - Run Python Main.py
 - argument after Main.py data desitiation folder
-- -si will alow you to spesify a start index
+- -si will allow you to spesify a start index

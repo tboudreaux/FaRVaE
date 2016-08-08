@@ -20,3 +20,6 @@ Aperture and Region file definition tool
   a) pip install sep
 <h3>wcsaxes</h3>
   a) pip install wcsaxes
+
+<h2>Running</h2>
+- Run Python Main.py

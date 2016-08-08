@@ -8,8 +8,11 @@ Aperture and Region file definition tool
 
 <h2>Installation</h2>
 1) Make sure python (tested on 2.7) is installed on the system
+
 2) Install Dependencies
 <h3>astropy</h3>
   a) You can install anaconda (https://www.continuum.io/downloads)
+  
   or
+  
   b) pip install --no-deps astropy

@@ -16,3 +16,7 @@ Aperture and Region file definition tool
   or
   
   b) pip install --no-deps astropy
+<h3>SEP</h3>
+  a) pip install sep
+<h3>wcsaxes</h3>
+  a) pip install wcsaxes

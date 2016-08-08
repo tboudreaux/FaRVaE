@@ -15,4 +15,4 @@ Aperture and Region file definition tool
   
   or
   
-  b) pip install --no-deps astropy
+  b) '''pip install --no-deps astropy'''

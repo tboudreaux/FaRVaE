@@ -27,7 +27,7 @@ dest_folder = args.Cs[0]
 i = 0
 print dest_folder
 start = os.path.abspath('.')
-os.chdir('Second_sdb/' + dest_folder)
+os.chdir('Second_SDB/' + dest_folder)
 working_dir = os.path.abspath('.')
 movies = args.mov
 c1 = '#66ff66'
@@ -496,7 +496,8 @@ while True:
     check = os.path.abspath('.')
     if args.fc == '//SAME':
         regiondirs = os.listdir('.')
-        regionfile = open('region_' + folder + '.reg', 'rb')
+        regionfilename = [x for x in regiondirs if 'region' in x][0]
+        regionfile = open(regionfilename, 'rb')
         regionread = regionfile.readlines()
         regionread = [x.rstrip() for x in regionread]
         size_info = regionread[4:7]
@@ -541,11 +542,15 @@ while True:
             try:
                 checkfolder = folder[4:].lower()
                 os.chdir(regiondirs[regiondirs.index(checkfolder)])
-                regionfile = open('region_' + regiondirs[regiondirs.index(checkfolder)] + '.reg', 'rb')
+                checkdir = os.listdir('.')
+                regionfilename = [x for x in checkdir if 'region' in x][0]
+				regionfile = open(regionfilename, 'rb')
             except IOError:
                 checkfolder = folder[4:].upper()
                 os.chdir(regiondirs[regiondirs.index(checkfolder)])
-                regionfile = open('region_' + regiondirs[regiondirs.index(checkfolder)] + '.reg', 'rb')
+                checkdir = os.listdir('.')
+				regionfilename = [x for x in checkdir if 'region' in x][0]
+				regionfile = open(regionfilename, 'rb')
             regionread = regionfile.readlines()
             regionread = [x.rstrip() for x in regionread]
             size_info = regionread[4:7]
@@ -592,7 +597,9 @@ while True:
         except OSError:
             os.chdir(TRD)
             try:
-                regionfile = open('region_' + folder + '.reg', 'rb')
+				checkdir = os.listdir('.')
+				regionfilename = [x for x in regiondirs if 'region' in x][0]
+				regionfile = open(regionfilename, 'rb')
                 regionread = regionfile.readlines()
                 regionread = [x.rstrip() for x in regionread]
                 size_info = regionread[4:7]
@@ -755,7 +762,7 @@ while True:
         ax.set_title(folder + ' | Target Number: ' + str(i+1) + ' (of ' + str(len(dirs)) + ')')
         plt.figtext(.1, .975, 'previous message: ' + prev_message, style='italic', bbox={'facecolor': 'red', 'alpha': 0.5,
                                                                                          'pad': 5})
-        write_to_clipboard(folder)
+        # write_to_clipboard(folder)
 
         if save_yes is True:
             bSave.color = 'green'
